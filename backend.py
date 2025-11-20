@@ -25,6 +25,6 @@ def predict():
     pred = model.predict(img)
     emotion = emotion_labels[np.argmax(pred)]
     return jsonify({'emotion': emotion})
-
+#......
 if __name__ == "__main__":
     app.run(debug=True)
