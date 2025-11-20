@@ -30,6 +30,10 @@ model = Sequential([
     Dropout(0.5),
     Dense(7, activation='softmax')
 ])
+
+
+
+
 model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 model.fit(X_train, y_train, epochs=25, batch_size=64, validation_data=(X_test, y_test))
