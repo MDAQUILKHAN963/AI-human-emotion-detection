@@ -14,7 +14,7 @@ def preprocess_image(image_bytes):
     img = cv2.resize(img, (48,48))
     img = img.reshape(1, 48, 48, 1) / 255.
     return img
-
+#...
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
